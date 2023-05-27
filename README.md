@@ -4,6 +4,20 @@
 
 Desafio da Frontend Mentor, que é uma calculadora de idade do usuário com base na sua data de nascimento. 
 
+## :art: **Visual do Projeto**
+
+### _Desktop e Telas Maiores_
+
+<h1 align="center">
+    <img src="./.github/desktop.png" style="width: 80%">
+</h1>
+
+### _Mobile e Telas Menores_
+
+<h1 align="center">
+    <img src="./.github/mobile.png" style="width: 40%">
+</h1>
+
 ## :wrench: **Tecnologias**
 
 ### :hammer: **Construção do site**
