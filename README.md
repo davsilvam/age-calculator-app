@@ -1,6 +1,6 @@
 # Age Calculator App
 
-📆 Projeto
+## :calendar: Projeto
 
 Desafio da Frontend Mentor, que é uma calculadora de idade do usuário com base na sua data de nascimento. 
 
