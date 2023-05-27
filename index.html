@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+    rel="stylesheet">
+
+  <!-- importação do css -->
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+  <title>Age calculator app</title>
+</head>
+
+<body>
+  <!-- fundo -->
+  <main>
+
+    <!-- card -->
+    <div class="card">
+      <!-- data de nascimento do usuário -->
+      <form>
+        <div class="wrapper">
+          <label for="day">DAY</label>
+          <input id="day" type="number" placeholder="DD" />
+
+          <span class="error-message"></span>
+        </div>
+
+        <div class="wrapper">
+          <label for="month">MONTH</label>
+          <input id="month" type="number" placeholder="MM" />
+
+          <span class="error-message"></span>
+        </div>
+
+        <div class="wrapper">
+          <label for="year">YEAR</label>
+          <input id="year" type="number" placeholder="YYYY" />
+
+          <span class="error-message"></span>
+        </div>
+      </form>
+
+      <!-- divisor -->
+      <div class="divider">
+        <hr />
+
+        <button onclick="calculateAge()">
+          <img src="assets/images/icon-arrow.svg" alt="Imagem de uma seta para baixo." />
+        </button>
+      </div>
+
+      <!-- resultados -->
+      <div class="result">
+        <strong> <span id="result-years">--</span> years </strong>
+
+        <strong> <span id="result-months">--</span> months </strong>
+
+        <strong> <span id="result-days">--</span> days </strong>
+      </div>
+    </div>
+  </main>
+</body>
+
+<!-- importação do javascript -->
+<script src="scripts/index.js"></script>
+
+</html>

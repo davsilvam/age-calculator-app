@@ -1,0 +1,169 @@
+/* resetando css */
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* cores */
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-gray: hsl(0, 0%, 86%);
+  --smokey-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+/* remover o menu do lado do input do tipo number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* fundo */
+main {
+  align-items: center;
+  background-color: var(--off-white);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+}
+
+/* card */
+.card {
+  background-color: var(--white);
+  border-radius: 12px 12px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+  width: 100%;
+  max-width: 720px;
+}
+
+/* inputs */
+.card form {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.card form .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card form .wrapper label {
+  color: var(--smokey-gray);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* estilo dos erros */
+.card form .wrapper.error label {
+  color: var(--light-red);
+}
+
+.card form .wrapper input {
+  border-radius: 6px;
+  border: 1px solid var(--light-gray);
+  color: var(--off-black);
+  font-size: min(4vw, 1.6rem);
+  font-weight: 700;
+  width: 100%;
+  max-width: 132px;
+  padding: 12px;
+  outline: none;
+}
+
+/* estilo dos erros */
+.card form .wrapper.error input {
+  border-color: var(--light-red);
+}
+
+/* estilo dos inputs ao serem focados */
+.card form .wrapper input:focus {
+  border: 1px solid var(--purple);
+}
+
+/* estilo dos erros */
+.card form .wrapper .error-message {
+  color: var(--light-red);
+  height: 12px;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* divisória */
+.card .divider {
+  padding: 32px 0;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.card .divider hr {
+  background-color: var(--light-gray);
+  width: 100%;
+}
+
+.card .divider button {
+  background-color: var(--purple);
+  cursor: pointer;
+  border: none;
+  border-radius: 100%;
+  right: 0;
+  padding: 16px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+}
+
+/* posicionamento do botão em telas menores */
+@media (max-width: 769px) {
+  .card .divider button {
+    right: calc(50% - min(6vw, 40px));
+  }
+}
+
+.card .divider button:hover {
+  background-color: var(--off-black);
+}
+
+.card .divider button img {
+  height: min(6vw, 40px);
+  width: min(6vw, 40px);
+}
+
+/* resultados */
+.card .result {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .result {
+  display: flex;
+  flex-direction: column;
+  font-style: italic;
+  font-size: min(12vw, 3.2rem);
+  font-weight: 800;
+  line-height: 100%;
+}
+
+.card .result strong {
+  color: var(--off-black);
+}
+
+.card .result strong span {
+  color: var(--purple);
+}
